@@ -1,7 +1,7 @@
 package org.example.ontap2.controller;
 
 import org.example.ontap2.model.Product;
-import org.example.ontap2.service.ProductService;
+import org.example.ontap2.service.IProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/api/products")
 public class ProductController {
-    private final ProductService productService;
 
-    public ProductController(ProductService productService) {
+    private final IProductService productService;
+
+    public ProductController(IProductService productService) {
         this.productService = productService;
     }
 
@@ -49,4 +51,3 @@ public class ProductController {
         }
     }
 }
-

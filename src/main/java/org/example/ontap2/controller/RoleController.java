@@ -1,7 +1,7 @@
 package org.example.ontap2.controller;
 
 import org.example.ontap2.model.Role;
-import org.example.ontap2.service.RoleService;
+import org.example.ontap2.service.IRoleService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/api/roles")
 public class RoleController {
-    private final RoleService roleService;
 
-    public RoleController(RoleService roleService) {
+    private final IRoleService roleService;
+
+    public RoleController(IRoleService roleService) {
         this.roleService = roleService;
     }
 

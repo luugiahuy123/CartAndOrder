@@ -1,7 +1,6 @@
 package org.example.ontap2.controller;
 
 import org.example.ontap2.model.Cart;
-import org.example.ontap2.service.CartService;
 import org.example.ontap2.service.ICartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -49,4 +48,3 @@ public class CartController {
         }
     }
 }
-

@@ -1,7 +1,7 @@
 package org.example.ontap2.controller;
 
 import org.example.ontap2.model.Order;
-import org.example.ontap2.service.OrderService;
+import org.example.ontap2.service.IOrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,9 +12,10 @@ import java.util.List;
 @CrossOrigin("*")
 @RequestMapping("/api/orders")
 public class OrderController {
-    private final OrderService orderService;
 
-    public OrderController(OrderService orderService) {
+    private final IOrderService orderService;
+
+    public OrderController(IOrderService orderService) {
         this.orderService = orderService;
     }
 
